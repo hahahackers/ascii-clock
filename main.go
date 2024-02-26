@@ -14,7 +14,7 @@ var clearScreen map[string]func() //create a map for storing clearScreen funcs
 func init() {
 	clearScreen = make(map[string]func()) //Initialize it
 	clearScreen["linux"] = func() {
-		cmd := exec.Command("clearScreen")
+		cmd := exec.Command("clear")
 		cmd.Stdout = os.Stdout
 		_ = cmd.Run()
 	}
